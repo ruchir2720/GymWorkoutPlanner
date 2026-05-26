@@ -97,3 +97,9 @@ Planned future enhancements include:
 ## Project Status
 
 Currently under active improvement and optimization.
+
+
+## APK Note
+
+The current APK version has been primarily tested on newer Android devices. 
+UI responsiveness and optimization for smaller or lower-end devices are currently being improved.
