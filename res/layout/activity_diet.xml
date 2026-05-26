@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#071426">
+
+    <!-- TOP CONTENT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:paddingTop="55dp">
+
+        <!-- TITLE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuel"
+            android:textColor="#F8FAFC"
+            android:textSize="34sp"
+            android:textStyle="bold"/>
+
+        <!-- CALORIES CARD -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="34dp"
+            app:cardBackgroundColor="#111D34"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- TOP ROW -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- LABEL -->
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DAILY CALORIES"
+                        android:textColor="#A5B4FC"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.12"/>
+
+                    <!-- TARGET BUTTON -->
+
+                    <TextView
+                        android:id="@+id/btnSetGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_small_chip"
+                        android:gravity="center"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:text="Set Goal"
+                        android:textColor="#C7D2FE"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <!-- CALORIES -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/tvCurrentCalories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#EAF2FF"
+                        android:textSize="52sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvCaloriesToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / 2200 kcal"
+                        android:textColor="#B8C4E0"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+                <!-- PROGRESS -->
+
+                <ProgressBar
+                    android:id="@+id/calorieProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="22dp"
+                    android:max="2200"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progress"/>
+
+                <!-- MACROS -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center">
+
+                    <!-- PROTEIN -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Protein"
+                            android:textColor="#AAB6D3"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12g"
+                            android:textColor="#EAF2FF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- CARBS -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carbs"
+                            android:textColor="#AAB6D3"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8g"
+                            android:textColor="#EAF2FF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- FATS -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fats"
+                            android:textColor="#AAB6D3"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9g"
+                            android:textColor="#EAF2FF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ADD FOOD BUTTON -->
+
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_add_food_button"
+            android:backgroundTint="@null"
+            android:elevation="8dp"
+            android:text="+  Add Food"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <!-- TODAY FOOD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Today's Food"
+                android:textColor="#F8FAFC"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIEW ALL"
+                android:textColor="#C7D2FE"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:letterSpacing="0.14"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ONLY THIS SCROLLS -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFood"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:overScrollMode="never"/>
+
+    <!-- BOTTOM NAV -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_bottom_nav"
+        app:itemIconTint="#A5B4FC"
+        app:itemTextColor="#A5B4FC"
+        app:itemIconSize="26dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</LinearLayout>

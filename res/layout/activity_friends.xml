@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#081120">
+
+    <!-- TOP CONTENT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:paddingTop="22dp">
+
+        <!-- TITLE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friends"
+            android:textColor="#FFFFFF"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:layout_marginTop="26dp"/>
+
+        <!-- SECTION -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY IDENTITY"
+            android:textColor="#94A3B8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- PREMIUM IDENTITY CARD -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="26dp"
+                android:background="@drawable/bg_identity_card">
+
+                <!-- TOP -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- PROFILE -->
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/imgMyProfile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            android:background="@drawable/bg_profile_circle"/>
+
+                        <!-- ONLINE DOT -->
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/bg_online_dot"/>
+
+                    </FrameLayout>
+
+                    <!-- USER INFO -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="20dp">
+
+                        <TextView
+                            android:id="@+id/tvMyName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User"
+                            android:textColor="#FFFFFF"
+                            android:textSize="34sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvMyCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ID: R27-001"
+                            android:textColor="#CBD5E1"
+                            android:textSize="17sp"
+                            android:layout_marginTop="6dp"/>
+
+                        <TextView
+                            android:id="@+id/tvMyBio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#B6C2E1"
+                            android:textSize="14sp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:layout_marginTop="6dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- BUTTON ROW -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp">
+
+                    <!-- SHARE -->
+
+                    <Button
+                        android:id="@+id/btnCopy"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:text="SHARE"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#2563EB"/>
+
+                    <!-- BIO -->
+
+                    <Button
+                        android:id="@+id/btnBio"
+                        android:layout_width="120dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:text="ADD BIO"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#1E293B"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ADD FRIEND -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD FRIEND"
+            android:textColor="#94A3B8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etFriendUid"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_dark"
+                android:hint="Enter Friend UID"
+                android:paddingStart="18dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#64748B"/>
+
+            <Button
+                android:id="@+id/btnAddFriend"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:text="ADD"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#2563EB"/>
+        </LinearLayout>
+
+        <!-- ACTIVE FRIENDS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIVE FRIENDS"
+            android:textColor="#94A3B8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <!-- FRIENDS LIST -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFriends"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:clipToPadding="false"/>
+
+    <!-- BOTTOM NAV -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_bottom_nav"
+        app:itemIconTint="#A5B4FC"
+        app:itemTextColor="#A5B4FC"
+        app:itemIconSize="26dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</LinearLayout>

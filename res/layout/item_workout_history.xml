@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="18dp"
+    app:cardBackgroundColor="#10192C"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- DATE BOX -->
+
+        <LinearLayout
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:background="#0B1424"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHistoryDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvHistoryMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAY"
+                android:textColor="#7F8BA8"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <!-- SESSION CONTENT -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/tvHistoryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7 May 2026"
+                android:textColor="#F3F7FF"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvHistoryNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bench press 4x12 20kg"
+                android:textColor="#A8B3CF"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="50"
+                android:ellipsize="none"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
