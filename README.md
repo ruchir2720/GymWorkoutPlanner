@@ -99,6 +99,22 @@ Planned future enhancements include:
 Currently under active improvement and optimization.
 
 
+## Application Screenshots like
+
+### Login Screen
+![Login](screenshots/login.jpg)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.jpg)
+
+### Workout Tracker
+![Workout](screenshots/workout.jpg)
+
+### BMI Calculator
+![BMI](screenshots/bmi.jpg)
+
+etc ...
+
 ## APK Note
 
 The current APK version has been primarily tested on newer Android devices. 
